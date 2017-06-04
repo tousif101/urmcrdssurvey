@@ -21,11 +21,11 @@ $(document).ready(function(){
                 var serialNumber = data[i].serialNumber;
 
                 bookmarksResults.innerHTML += '<div class = "well">'  +
-                                            '<h3>' + serialNumber + 
-
+                                            '<h4>' + "<b><u>"+ "Serial: "+"</u></b>"  +serialNumber + "<br><b><u>"+" Friends: "+"</u></b>"+ friendsList + "<br><b><u>"+" From: "+"</u></b>" +fromPerson + "<br><b><u>"+" Seed: "+"</u></b>" + isSeed +
+                                            "<br>"+"<br>"+
                                             ' <button id="'+personId+'" class="btn btn-danger deleteButton" href="#">Delete</button> '                  
                                             
-                                            '</h3>'+'</div>';
+                                            '</h4>'+'</div>';
 
             }
            
@@ -74,24 +74,10 @@ $(document).ready(function(){
     }
  
 
-
-
     $('#authorize').submit(function(event) {
         console.log("I made it here");
         var serialNumber = $('input[name=serialNumber]').val().trim(); 
-
-        // $.ajax({
-        //     type        : 'GET', 
-        //     url         : 'http://0.0.0.0:3000/SurveyTakers/addfriends', 
-        //     data        : {serialNumber: serialNumber},    
-        //     dataType    : 'json', 
-        //     encode          : true
-        // })
-        
-        // .done(function(data, status) {
-        //     console.log(data);
-        // });
-                  
+       
         $.ajax({
             type        : 'GET', 
             url         : 'http://0.0.0.0:3000/SurveyTakers/createnewfriends', 
@@ -102,39 +88,7 @@ $(document).ready(function(){
  
         .done(function(data, status) {
             console.log(data);
-        });
-
-        //  $.ajax({
-        //     type        : 'GET', 
-        //     url         : 'http://0.0.0.0:3000/SurveyTakers/sendemail', 
-        //     data        : {serialNumber: serialNumber},    
-        //     dataType    : 'json', 
-        //     encode      : true
-        // })
-        
-        // .done(function(data, status) {
-        //     //$("#divdeps").dialog('open');
-        //     //http://stackoverflow.com/questions/29102747/ajax-request-passing-dynamic-content-to-modal
-        //     //use that link to open up the module with notifcation when user created, 
-        //     //when emails are sent
-        //     //http://stackoverflow.com/questions/21192763/how-to-dynamically-add-list-items-in-jquery
-        //     //http://stackoverflow.com/questions/6322696/deleting-items-from-a-dynamically-generated-list-with-jquery
-        //     console.log(data);
-        // });
-
-        // $.ajax({
-        //     type        : 'GET', 
-        //     url         : 'http://0.0.0.0:3000/SurveyTakers/createSeed',     
-        //     dataType    : 'json', 
-        //     encode      : true
-        // })
- 
-        // .done(function(data, status) {
-        //     console.log(data);
-        // });
-     
-
-        
+        }); 
 
     });
 
