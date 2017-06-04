@@ -1,0 +1,38 @@
+{
+  "name": "SurveyTaker",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "serialNumber": {
+      "type": "string"
+    },
+    "isSeed": {
+      "type": "boolean"
+    },
+    "surveyCompleted": {
+      "type": "boolean"
+    },
+    "fromPerson": {
+      "type": "string"
+    },
+    "friends": {
+      "type": [
+        "string"
+      ]
+    },
+    "surveyStarted": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

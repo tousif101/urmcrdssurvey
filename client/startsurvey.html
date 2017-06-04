@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Start Survey</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script type = "text/javascript" src = "js/login.js"></script>
+</head>
+<body>
+
+
+
+ <div class="container">
+   <div class="jumbotron">
+
+<form>
+        
+        <!-- NAME -->
+        <div id="name-group" class="form-group">
+            <label for="name">Serial Number</label>
+            <input type="text" class="form-control" name="serialNumber" placeholder="Serial Number">
+            <!-- errors will go here -->
+            <div class="help-block" style="display:none;"  >Please enter proper Serial Number</div>
+        </div>
+
+        <!-- EMAIL -->
+        <div id="email-group" class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Email Here">
+
+            <div class="email-block-error" style="display:none;"  >Please enter proper Email</div>
+            <!-- errors will go here -->
+        </div>
+
+         <!-- Confirm EMAIL -->
+        <div id="emailconfirm-group" class="form-group">
+            <label for="emailConfirm">Confirm Email</label>
+            <input type="text" class="form-control" name="emailConfirm" placeholder="Confirm Email Here">
+
+            <div class="email-confirm-block-error" style="display:none;"  >Please Check Email</div>
+            <!-- errors will go here -->
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Continue</button>
+
+    </form>
+      <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please Go To Survey</h4>
+        </div>
+        <div class="modal-body">
+          <a href="https://signsurvey.urmc.rochester.edu/survey.html?surveyID=217&Preview=1" target="_blank">Click here for survey.</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+ </div>
+
+</body>
+</html>
+
